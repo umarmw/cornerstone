@@ -16,96 +16,115 @@
             </div>
         </div>
     {{/if}}
-
 {{/if}}
+
 <footer class="footer" role="contentinfo">
-    <h2 class="footer-title-sr-only">{{lang 'footer.title'}}</h2>
-    <div class="container">
-        {{#if theme_settings.social_icon_placement_bottom '!==' 'bottom_none'}}
-            <article class="footer-info-col
-                footer-info-col--social
-                footer-info-col--{{#if theme_settings.social_icon_placement_bottom '===' 'bottom_left'}}left{{else}}right{{/if}}"
-                data-section-type="footer-webPages">
-                    <h3 class="footer-info-heading">{{lang 'social.connect'}}</h3>
-                    {{> components/common/social-links}}
-            </article>
-        {{/if}}
-        <section class="footer-info">
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-webPages">
-                <h3 class="footer-info-heading">{{lang 'footer.navigate'}}</h3>
-                <ul class="footer-info-list">
-                    {{#each pages}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li>
-                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
-                    </li>
-                </ul>
-            </article>
-
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-categories">
-                <h3 class="footer-info-heading">{{lang 'footer.categories'}}</h3>
-                <ul class="footer-info-list">
-                    {{#each categories}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                </ul>
-            </article>
-
-            {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="footer-brands">
-                <h3 class="footer-info-heading">{{lang 'footer.brands'}}</h3>
-                <ul class="footer-info-list">
-                    {{#each shop_by_brand}}
-                        <li>
-                            <a href="{{url}}">{{name}}</a>
-                        </li>
-                    {{/each}}
-                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
-                </ul>
-            </article>
-            {{/and}}
-
-            {{#if settings.address}}
-            <article class="footer-info-col footer-info-col--small" data-section-type="storeInfo">
-                <h3 class="footer-info-heading">{{lang 'footer.info'}}</h3>
-                <address>{{nl2br settings.address}}</address>
-                {{#if settings.phone_number}}
-                    <strong>{{lang 'footer.call_us' phone_number=settings.phone_number}}</strong>
-                {{/if}}
-            </article>
-            {{/if}}
-
-            <article class="footer-info-col" data-section-type="newsletterSubscription">
-                {{#if settings.show_newsletter_box}}
-                    {{> components/common/subscription-form}}
-                {{/if}}
-                {{> components/common/payment-icons}}
-            </article>
-        </section>
-        {{#if theme_settings.geotrust_ssl_common_name}}
-            <div class="footer-geotrust-ssl-seal">
-                {{> components/common/geotrust-ssl-seal}}
+        <div class="footer__container">
+          <img class="footer__logo" src="/assets/img/global/lumi-logo-1.svg" alt="Lumi by Pampers">
+          <ul class="footer__list">
+            <li class="footer__list__item">
+               <a class="footer__link" href="#">
+               <span>{{lang 'footer.products'}}</span>
+               </a>
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="#">
+               <span>{{lang 'footer.shopping_cart'}}</span>
+               </a>
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="#">
+               <span>{{lang 'footer.help'}}</span>
+               </a>
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="#">
+               <span>{{lang 'footer.subscription'}}</span>
+               </a>
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="#">
+               <span>{{lang 'footer.product_terms'}}</span>
+               </a>
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="https://www.pg.com/privacy/english/privacy_notice.shtml">
+               <span>{{lang 'footer.privacy'}}</span>
+               </a>
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="https://www.pg.com/privacy/english/privacy_statement.shtml#CCPA">
+               <span>{{lang 'footer.ca_privacy'}}</span>
+               </a>
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="javascript:void(0)" onclick="Optanon.ToggleInfoDisplay();">{{lang 'footer.do_not_sell'}}</a>                    
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="https://www.pg.com/privacy/english/privacy_statement.shtml#iba">
+               <span>{{lang 'footer.adchoices'}}</span><img class="footer__link__adchoice" alt="addchoices" src="/assets/img/footer/ad-choice.png"></a>                   
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="#">
+               <span>{{lang 'footer.store_policy'}}</span>
+               </a>
+            </li>
+            <li class="footer__list__item">
+               <a class="footer__link" href="https://www.pg.com/en_US/privacy/english/cookie_notice.shtml">
+               <span>{{lang 'footer.cookies'}}</span>
+             </a>
+            </li>
+            <li class="footer__list__item">
+              <a class="footer__link" href="https://www.pampers.com/en-us">
+              <span>{{lang 'footer.pampers'}}</span>
+            </a>
+            </li>
+            <li class="footer__list__item">
+              <a class="footer__link" href="https://us.pg.com/">
+              <span>{{lang 'footer.pgsite'}}</span>
+              </a>
+            </li>
+            <li class="footer__list__item">
+              <a class="footer__link" href="https://www.facebook.com/LumibyPampers/">
+              <span>{{lang 'footer.facebook'}}</span>
+            </a>
+            </li>
+            <li class="footer__list__item">
+              <a class="footer__link" href="https://www.instagram.com/lumibypampers/">
+              <span>{{lang 'footer.instagram'}}</span>
+              </a>
+            </li>
+            <li class="footer__list__item">
+              <a class="footer__link" href="#">
+              <span>{{lang 'footer.sitemap'}}</span>
+              </a>
+            </li>
+          </ul>
+      
+          <div class="separator"></div>
+      
+          <div class="footer__copyright">
+            <img class="footer__copyright__logo" src="/assets/img/global/pglogo.png">
+            <div class="footer__copyright__content">
+              <p>{{lang 'footer.rights_reserved'}}</p>
+              <p>{{lang 'footer.use_and_access'}}&nbsp;
+                <a href="./terms_conditions">{{lang 'footer.terms_and_conditions'}}</a> {{lang 'footer.legal_agreement'}}
+              </p>
             </div>
-        {{/if}}
-        {{#if settings.paypal_commerce_credit_message}}
-        <div class="footer-copyright">
-            <p class="paypal-credit">{{nl2br settings.paypal_commerce_credit_message}}</p>
+      
+            <div class="footer__copyright__bbb m-none d-block">
+              <a href="http://www.bbb.org/cincinnati/business-reviews/manufacturers-and-producers/the-procter-gamble-company-in-cincinnati-oh-3036">
+              <img class="footer__copyright__bbblogo-desktop" src="/assets/img/footer/bbb_sticker.webp">
+              </a>
+            </div>
+          </div>
+      
+          <div class="footer__copyright__bbb d-none">
+            <div class="separator"></div>
+              <a href="http://www.bbb.org/cincinnati/business-reviews/manufacturers-and-producers/the-procter-gamble-company-in-cincinnati-oh-3036">
+              <img class="footer__copyright__bbblogo-mobile" src="/assets/img/footer/bbb_sticker.webp">
+              </a>
+          </div>
+          
         </div>
-        {{/if}}
-        {{#if theme_settings.show_powered_by}}
-            <div class="footer-copyright">
-                <p class="powered-by">{{lang 'footer.powered_by'}} <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></p>
-            </div>
-        {{/if}}
-        {{#if theme_settings.show_copyright_footer}}
-            <div class="footer-copyright">
-                <p class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </p>
-            </div>
-        {{/if}}
-    </div>
 </footer>
