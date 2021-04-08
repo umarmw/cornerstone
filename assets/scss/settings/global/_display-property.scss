@@ -1,0 +1,15 @@
+.m-none {
+  display: none;
+}
+
+.d-block {
+ @include screen($desktop) {
+    display: block;
+  }
+}
+
+.d-none {
+    @include screen($desktop) {
+        display: none;
+    }
+}

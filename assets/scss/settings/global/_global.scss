@@ -5,7 +5,8 @@
 // 1. Layout is dependant on Typography, so @import typography first.
 //
 // -----------------------------------------------------------------------------
-
+//Media query mixin
+@import "media-query-mixin";
 // Export
 @import "export/export";
 
@@ -29,6 +30,9 @@
 
 // Overlays
 @import "overlay/overlay";
+
+// Display Property
+@import "display-property";
 
 // Set these to true so that Foundation styles are exposed from Citadel
 $include-html-classes: false !default;
