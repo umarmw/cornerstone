@@ -1,13 +1,13 @@
 .footer {
     padding: 40px 0;
-    background-color: #f0faf9;
+    background-color: stencilColor("banner--default-backgroundColor");
 }
 
 .footer__container{
   max-width: 1100px;
   padding: 32px;
   margin: 0 auto;
-  @media only screen and (min-width: 1044px) {
+  @include screen($desktop-large) {
         padding: 10px;
     }
 }
@@ -23,10 +23,10 @@
     list-style-type: none;
     margin: 0;
     padding: 0;
-    @media only screen and (min-width: 640px) {
+    @include screen($tablet) {
         column-count: 3;
     }
-    @media only screen and (min-width: 961px) {
+    @include screen($desktop) {
         column-count: 4;
     }
 }
@@ -40,17 +40,17 @@
     align-items: center;
     font-size: 14px;
     line-height: 24px;
-    color: #989c9c;
+    color: stencilColor("color-textLink");
     padding: 8px 0;
     text-decoration: none;
     &:hover,
     &:active {
         @media (pointer: fine) {
-            color: #46929c;
+            color: stencilColor("color-textLink--hover");
             text-decoration: underline;
         }
     }
-    @media only screen and (min-width: 640px) {
+    @include screen($tablet) {
         font-size: 18px;
         font-weight: 300;
     }
@@ -62,7 +62,7 @@
     font-size: 12px;
     line-height: 20px;
     margin: 40px 0 0;
-    @media only screen and (min-width: 640px) {
+    @include screen($tablet) {
         font-size: 14px;
         align-items: center;
     }
@@ -73,7 +73,7 @@
 
 .footer__copyright__content {
     width: 100%;
-    @media only screen and (min-width: 640px) {
+    @include screen($tablet) {
         margin-right: 56px;
     }
     & > p {
@@ -81,10 +81,14 @@
     }
     & > span {
         display: block;
-        @media only screen and (min-width: 640px) {
+        @include screen($tablet) {
             display: inline-block;
         }
     }
+}
+
+.footer__copyright__pglink{
+    color: stencilColor("color-textBase");
 }
 
 .footer__link__adchoice {
@@ -100,25 +104,9 @@
 }
 
 .separator {
-    border-bottom: 2px solid #f0f2f2;
+    border-bottom: 2px solid stencilColor("color-primary");
     margin: 32px auto;
     max-width: 100%;
     width: 100%;
     position: relative;
-}
-
-.m-none {
-  display: none;
-}
-
-.d-block {
- @media only screen and (min-width: 1044px) {
-    display: block;
-  }
-}
-
-.d-none {
-  @media only screen and (min-width: 1044px) {
-    display: none;
-  }
 }
