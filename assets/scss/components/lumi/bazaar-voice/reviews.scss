@@ -1,0 +1,6 @@
+.bv-reviews {
+    //styles here
+    @include breakpoint("medium") {
+        display: flex;
+    }
+}

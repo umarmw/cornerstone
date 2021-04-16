@@ -62,6 +62,7 @@ export default class BazaarVoice{
 
     sortBy(type){
         //switchcase for type
+        //&sort=Rating:desc
     }
 
 }
