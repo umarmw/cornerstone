@@ -8,7 +8,8 @@ export default class BazaarVoice{
         this.passkey = 'cayvJ62u3ELqBkmuvrVNySlCyYOlhUmHOPSiz375HmRdQ';
         this.limit = 10;
         this.env = 'https://stg.api.bazaarvoice.com/';
-        this.path = `${this.env}data/reviews.json?apiversion=${this.apiVersion}&passkey=${this.passkey}&ProductId=${this.rnrId}&limit=${this.limit}`;
+        this.reviewsPath = `${this.env}data/reviews.json?apiversion=${this.apiVersion}&passkey=${this.passkey}&ProductId=${this.rnrId}&limit=${this.limit}`;
+        this.statisticsPath = `${this.env}data/statistics.json?apiversion=${this.apiVersion}&passkey=${this.passkey}&filter=productId:${this.rnrId}&stats=Reviews`;
     }
 
     getReviews(){
@@ -23,7 +24,7 @@ export default class BazaarVoice{
         `;
 
         $.ajax({
-            url: this.path,
+            url: this.reviewsPath,
             success: function(myReviews){
                 console.log(myReviews);
                 var renderReviews = Handlebars.compile(reviewListTemplate);
@@ -34,8 +35,17 @@ export default class BazaarVoice{
         });
     }
 
-    getReviewSummary(){
-        //
+    getStatistics(){
+        $.ajax({
+            url: this.statisticsPath,
+            success: function(myStats){
+                var stats = myStats.Results[0].ProductStatistics.ReviewStatistics;
+                console.log(stats);
+                $(".js-bv-reviews__summary-rating").html(stats.AverageOverallRating);
+                $(".js-bv-reviews__summary-stars").html(stats.OverallRatingRange);
+                $(".js-bv-reviews__summary-count span").html(stats.TotalReviewCount);
+            }
+        });
     }
 
     openRnRModal(){

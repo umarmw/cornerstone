@@ -4,7 +4,16 @@
         <h3 class="js-bv-reviews__summary-rating">00</h3>
         <div class="js-bv-reviews__summary-stars">[stars]</div>
         <div class="js-bv-reviews__summary-count">From <span>00</span> reviews</div>
-        <button class="btn btn-primary js-bv-reviews__write-review">Write a review</button>
+
+        <a href="{{product.url}}{{#if is_ajax}}#write_bv_review{{/if}}"
+            class="js-bv-reviews__write-review productView-bvReviewLink productView-bvReviewLink--new"
+            {{#unless is_ajax}}data-reveal-id="modal-bv-review-form"{{/unless}}
+            role="button"
+        >
+            {{lang 'products.reviews.new'}}
+        </a>
+        {{> components/products/modals/writeBVReview}}
+
         <select class="select select-wide js-bv-reviews__sort-review">
             <option value="-1">Sort By</option>
             <option value="1">Most recent</option>

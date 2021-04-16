@@ -17,6 +17,7 @@ export default class Product extends PageManager {
         this.$reviewLink = $('[data-reveal-id="modal-review-form"]');
         this.$bulkPricingLink = $('[data-reveal-id="modal-bulk-pricing"]');
         this.reviewModal = modalFactory('#modal-review-form')[0];
+        this.reviewBVModal = modalFactory('#modal-bv-review-form')[0];
     }
 
     onReady() {
@@ -47,6 +48,10 @@ export default class Product extends PageManager {
 
         $(document).on(ModalEvents.opened, '#modal-review-form', () => this.reviewModal.setupFocusTrap());
 
+        //BV open modal
+        $(document).on(ModalEvents.opened, '#modal-bv-review-form', () => this.reviewBVModal.setupFocusTrap());
+
+        //TODO BV validations
         $('body').on('click', '[data-reveal-id="modal-review-form"]', () => {
             validator = review.registerValidation(this.context);
             this.ariaDescribeReviewInputs($reviewForm);
@@ -71,6 +76,7 @@ export default class Product extends PageManager {
         const bv = new BazaarVoice(rnrId);
         // get list of reviews
         bv.getReviews();
+        bv.getStatistics();
     }
 
     ariaDescribeReviewInputs($form) {
