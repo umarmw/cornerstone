@@ -7,13 +7,13 @@
 }
 
 .button--primary {
-  background-color: stencilColor("button--primary-color");
-  border-color: stencilColor("button--primary-color");
-  color: stencilColor("color-white");
+  background-color: stencilColor("button--primary-color") !important;
+  border-color: stencilColor("button--primary-color") !important;
+  color: stencilColor("color-white") !important;
   &:hover, &:focus, &:active {
-    background-color: stencilColor("button--primary-colorHover");
-    border-color: stencilColor("button--primary-colorHover");
-    color: stencilColor("color-white");
+    background-color: stencilColor("button--primary-colorHover") !important;
+    border-color: stencilColor("button--primary-colorHover") !important;
+    color: stencilColor("color-white") !important;
   }
 }
 
@@ -43,13 +43,13 @@
 }
 
 .button--primary-outline {
-  color: stencilColor("color-textBase");
-  background-color: stencilColor("color-white");
-  border: 2px solid stencilColor("button--primary-color");
+  color: stencilColor("color-textBase") !important;
+  background-color: stencilColor("color-white") !important;
+  border: 2px solid stencilColor("button--primary-color") !important;
   &:hover, &:focus, &:active {
-    background-color: stencilColor("color-white");
-    border: 2px solid stencilColor("button--primary-color");
-    color: stencilColor("color-greyDarkest");
+    background-color: stencilColor("color-white") !important;
+    border: 2px solid stencilColor("button--primary-color") !important;
+    color: stencilColor("color-greyDarkest") !important;
   }
 }
 
@@ -80,6 +80,10 @@
   &:hover {
     color: stencilColor("color-greyDarkest");
   }
+}
+
+.button--small {
+  font-size: 14px;
 }
 
 .form-input, .form-select {
@@ -118,4 +122,50 @@ input, button, select, textarea, details, [href] {
   &:focus {
     outline: none !important;
   }
+}
+
+
+//cart page
+.cart-content-container {
+  display: block;
+  @media (min-width: 961px) {
+    display: flex;
+  }
+}
+
+.cart-content-container__content {
+  width:100%;
+  padding: 15px;
+  @media (min-width: 961px) {
+    width: 65%;
+    margin-right: 30px;
+  }
+}
+
+.cart-content-container__totals {
+  max-width: 380px;
+  box-shadow: 0 5px 20px 0 stencilColor("color-greyLighter");
+  background-color: stencilColor("color-white");
+  padding: 15px;
+  margin: 40px auto;
+  @media (min-width: 961px) {
+    width: 35%;
+  }
+}
+
+.cart-actions .button{
+  display: block;
+  float: unset;
+}
+
+.cart-totals__container {
+  width: 100%;
+  padding:15px;
+  @media (min-width: 961px) {
+    width: 100%;
+  }
+}
+
+.shipping-quotes {
+  text-align: center;
 }
