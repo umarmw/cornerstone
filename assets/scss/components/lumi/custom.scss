@@ -1,174 +1,83 @@
-.button {
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 500;
-  letter-spacing: 0;
-  text-align: center;
-}
-
-.button--primary {
-  background-color: stencilColor("button--primary-color") !important;
-  border-color: stencilColor("button--primary-color") !important;
-  color: stencilColor("color-white") !important;
-  border: 2px solid;
-  &:hover, &:focus, &:active {
-    background-color: stencilColor("button--primary-colorHover") !important;
-    border-color: stencilColor("button--primary-colorHover") !important;
-    color: stencilColor("color-white") !important;
-  }
-}
-
-.button--secondary {
-  color: stencilColor("color-white");
-  background-color:stencilColor("button--secondary-color");
-  border-color:stencilColor("button--secondary-color");
-  border: 2px solid;
-  &:hover, &:focus, &:active {
-    background-color: stencilColor("button--secondary-colorHover");
-    border-color: stencilColor("button--secondary-colorHover");
-    color: stencilColor("color-white");
-  }
-}
-
-.button--tertiary {
-  color: stencilColor("color-white");
-  background-color: stencilColor("button--tertiary-color");
-  border-color: stencilColor("button--tertiary-borderColor");
-  font-size: 14px;
-  font-weight: 300;
-  letter-spacing: 0;
-  border: 2px solid;
-  &:hover, &:focus, &:active {
-    background-color: stencilColor("button--tertiary-colorHover");
-    border-color: stencilColor("button--tertiary-borderColor");
-    color: stencilColor("color-white");
-  }
-}
-
-.button--primary-outline {
-  color: stencilColor("color-textBase") !important;
-  background-color: stencilColor("color-white") !important;
-  border: 2px solid stencilColor("button--primary-color") !important;
-  &:hover, &:focus, &:active {
-    background-color: stencilColor("color-white") !important;
-    border: 2px solid stencilColor("button--primary-color") !important;
-    color: stencilColor("color-greyDarkest") !important;
-  }
-}
-
-.button--secondary-outline {
-  color: stencilColor("color-textBase");
-  background-color: stencilColor("color-white");
-  border: 2px solid stencilColor("button--secondary-color");
-  &:hover, &:focus, &:active {
-    background-color: stencilColor("color-white");
-    border: 2px solid stencilColor("button--secondary-color");
-    color: stencilColor("color-greyDarkest");
-  }
-}
-
-.button--tertiary-outline {
-  color: stencilColor("color-textBase");
-  background-color: stencilColor("color-white");
-  border: 2px solid stencilColor("color-textBase");
-  &:hover, &:focus, &:active {
-    background-color: stencilColor("color-white");
-    border: 2px solid stencilColor("color-greyDarkest");
-    color: stencilColor("color-greyDarkest");
-  }
-}
-
-.button--action {
-  color: stencilColor("color-greyDarkest");
-  &:hover {
-    color: stencilColor("color-greyDarkest");
-  }
-}
-
-.button--small {
-  font-size: 14px;
-}
-
 .form-input, .form-select {
-  border: 2px solid stencilColor("color-primary");
-  padding: 10px;
-  &:focus {
     border: 2px solid stencilColor("color-primary");
-    outline: none !important;
+    padding: 10px;
+    &:focus {
+      border: 2px solid stencilColor("color-primary");
+      outline: none !important;
+    }
   }
-}
-
-.form-field--error .form-field-error, .form-field--error .form-inlineMessage {
-  color: stencilColor("input-form--error") !important;
-  font-weight: 300;
-}
-
-.form-field--error .form-input, .form-field--error .form-select, .form-field--error .form-checkbox + .form-label::before, .form-field--error .form-radio + .form-label::before, .form-field--error .form-prefixPostfix-label {
-  border-color: stencilColor("input-form--error");
-}
-
-.form-inlineMessage {
-  font-size: 12px;
-  margin: 0px;
-  &::before {
-    background: unset !important;
-    width: 0px !important;
+  
+  .form-field--error .form-field-error, .form-field--error .form-inlineMessage {
+    color: stencilColor("input-form--error") !important;
+    font-weight: 300;
   }
-}
-
-.form-actions a {
-  vertical-align: unset;
-  //margin-top: 10px !important;
-}
-
-input, button, select, textarea, details, [href] {
-  &:focus {
-    outline: none !important;
+  
+  .form-field--error .form-input, .form-field--error .form-select, .form-field--error .form-checkbox + .form-label::before, .form-field--error .form-radio + .form-label::before, .form-field--error .form-prefixPostfix-label {
+    border-color: stencilColor("input-form--error");
   }
-}
-
-
-//cart page
-.cart-content-container {
-  display: block;
-  @media (min-width: 961px) {
-    display: flex;
+  
+  .form-inlineMessage {
+    font-size: 12px;
+    margin: 0px;
+    &::before {
+      background: unset !important;
+      width: 0px !important;
+    }
   }
-}
-
-.cart-content-container__content {
-  width:100%;
-  padding: 15px;
-  @media (min-width: 961px) {
-    width: 65%;
-    margin-right: 30px;
+  
+  .form-actions a {
+    vertical-align: unset;
+    //margin-top: 10px !important;
   }
-}
-
-.cart-content-container__totals {
-  max-width: 380px;
-  box-shadow: 0 5px 20px 0 stencilColor("color-greyLighter");
-  background-color: stencilColor("color-white");
-  padding: 15px;
-  margin: 40px auto;
-  @media (min-width: 961px) {
-    width: 35%;
+  
+  input, button, select, textarea, details, [href] {
+    &:focus {
+      outline: none !important;
+    }
   }
-}
-
-.cart-actions .button{
-  display: block;
-  float: unset;
-}
-
-.cart-totals__container {
-  width: 100%;
-  padding:15px;
-  @media (min-width: 961px) {
+  
+  
+  //cart page
+  .cart-content-container {
+    display: block;
+    @media (min-width: 961px) {
+      display: flex;
+    }
+  }
+  
+  .cart-content-container__content {
+    width:100%;
+    padding: 15px;
+    @media (min-width: 961px) {
+      width: 65%;
+      margin-right: 30px;
+    }
+  }
+  
+  .cart-content-container__totals {
+    max-width: 380px;
+    box-shadow: 0 5px 20px 0 stencilColor("color-greyLighter");
+    background-color: stencilColor("color-white");
+    padding: 15px;
+    margin: 40px auto;
+    @media (min-width: 961px) {
+      width: 35%;
+    }
+  }
+  
+  .cart-actions .button{
+    display: block;
+    float: unset;
+  }
+  
+  .cart-totals__container {
     width: 100%;
+    padding:15px;
+    @media (min-width: 961px) {
+      width: 100%;
+    }
   }
-}
-
-.shipping-quotes {
-  text-align: center;
-}
+  
+  .shipping-quotes {
+    text-align: center;
+  }

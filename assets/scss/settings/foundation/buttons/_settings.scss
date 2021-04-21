@@ -49,15 +49,15 @@ $buttonStyle-disabled-borderColor:           stencilColor("button--disabled-bord
 $buttonStyle-disabled-borderColorHover:      null;
 $buttonStyle-disabled-borderColorActive:     null;
 
-$buttonStyle-tertiary-color:                 null;
-$buttonStyle-tertiary-colorHover:            null;
-$buttonStyle-tertiary-colorActive:           null;
-$buttonStyle-tertiary-backgroundColor:       null;
-$buttonStyle-tertiary-backgroundColorHover:  null;
-$buttonStyle-tertiary-backgroundColorActive: null;
-$buttonStyle-tertiary-borderColor:           null;
-$buttonStyle-tertiary-borderColorHover:      null;
-$buttonStyle-tertiary-borderColorActive:     null;
+$buttonStyle-tertiary-color:                 stencilColor("button--tertiary-color");
+$buttonStyle-tertiary-colorHover:            stencilColor("button--tertiary-colorHover");
+$buttonStyle-tertiary-colorActive:           stencilColor("button--tertiary-colorActive");
+$buttonStyle-tertiary-backgroundColor:       stencilColor("button--tertiary-backgroundColor");
+$buttonStyle-tertiary-backgroundColorHover:  stencilColor("button--tertiary-backgroundColorHover");
+$buttonStyle-tertiary-backgroundColorActive: stencilColor("button--tertiary-backgroundColorActive");
+$buttonStyle-tertiary-borderColor:           stencilColor("button--tertiary-backgroundColor");
+$buttonStyle-tertiary-borderColorHover:      stencilColor("button--secondary-backgroundColorHover");
+$buttonStyle-tertiary-borderColorActive:     stencilColor("button--secondary-backgroundColorActive");
 
 $buttonStyle-action-color:                   null;
 $buttonStyle-action-colorHover:              null;
@@ -116,10 +116,10 @@ $button-display:                        inline-block;
 $button-margin-bottom:                  spacing("base");
 
 $button-font-family:                    fontFamily("headingSans");
-$button-font-weight:                    fontWeight("normal");
+$button-font-weight:                    fontWeight("medium");
 $button-font-align:                     center;
 
-$button-border-width:                   1px;
+$button-border-width:                   2px;
 $button-border-style:                   solid;
 
 $button-radius:                         $global-radius;

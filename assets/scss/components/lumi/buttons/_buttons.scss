@@ -1,0 +1,64 @@
+.button {
+  border-radius: 8px;
+  text-align: center;
+}
+
+.button--secondary {
+  color: stencilColor("color-white");
+  background-color:stencilColor("button--secondary-color");
+  border-color:stencilColor("button--secondary-color");
+  &:hover, &:focus, &:active {
+    background-color: stencilColor("button--secondary-colorHover");
+    border-color: stencilColor("button--secondary-colorHover");
+    color: stencilColor("color-white");
+  }
+}
+
+.button--tertiary {
+  font-size: 14px;
+  font-weight: fontWeight("thin");
+}
+
+.button--primary-outline {
+  color: stencilColor("color-textBase");
+  background-color: stencilColor("color-white");
+  border: 2px solid stencilColor("button--primary-backgroundColor");
+  &:hover, &:focus, &:active {
+    background-color: stencilColor("color-white");
+    border: 2px solid stencilColor("button--primary-backgroundColor");
+    color: stencilColor("color-greyDarkest");
+  }
+}
+
+.button--secondary-outline {
+  color: stencilColor("color-textBase");
+  background-color: stencilColor("color-white");
+  border: 2px solid stencilColor("button--secondary-backgroundColor");
+  &:hover, &:focus, &:active {
+    background-color: stencilColor("color-white");
+    border: 2px solid stencilColor("button--secondary-backgroundColor");
+    color: stencilColor("color-greyDarkest");
+  }
+}
+
+.button--tertiary-outline {
+  color: stencilColor("color-textBase");
+  background-color: stencilColor("color-white");
+  border: 2px solid stencilColor("color-textBase");
+  &:hover, &:focus, &:active {
+    background-color: stencilColor("color-white");
+    border: 2px solid stencilColor("color-textBase");
+    color: stencilColor("color-greyDarkest");
+  }
+}
+
+.button--action {
+  color: stencilColor("color-greyDarkest");
+  &:hover {
+    color: stencilColor("color-greyDarkest");
+  }
+}
+
+.button--small {
+  font-size: 14px;
+}
