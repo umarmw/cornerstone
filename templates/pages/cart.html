@@ -4,7 +4,7 @@ cart: true
 {{#partial "page"}}
 <div class="page">
 
-    <main class="page-content container" data-cart>
+    <main class="container" data-cart>
         {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
         {{> components/cart/page-title}}
@@ -16,30 +16,34 @@ cart: true
         {{#if cart.items.length}}
             <div class="loadingOverlay"></div>
 
-            <div data-cart-content class="cart-content-padding-right">
-                {{> components/cart/content}}
-            </div>
+            <div class="cart-content-container">
+                <div data-cart-content class="cart-content-padding-right cart-content-container__content">
+                    {{> components/cart/content}}
+                </div>
 
-            <div data-cart-totals class="cart-content-padding-right">
-                {{> components/cart/totals}}
+                <div data-cart-totals class="cart-content-padding-right cart-content-container__totals">
+                    {{> components/cart/totals}}
+
+                    {{#if cart.show_primary_checkout_button}}
+                        <div class="cart-actions cart-content-padding-right">
+                            <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}">{{lang 'cart.checkout.button'}}</a>
+                            {{#if cart.show_multiple_address_shipping}}
+                                <a class="checkoutMultiple" href="{{urls.checkout.multiple_address}}">
+                                    {{lang 'cart.preview.checkout_multiple'}}
+                                </a>
+                            {{/if}}
+                        </div>
+                    {{else}}
+                        <div class="cart-actions cart-content-padding-right">
+                            <a class="button" href="{{urls.home}}" title="{{lang 'cart.continue_shopping'}}">{{lang 'cart.continue_shopping'}}</a>
+                        </div>
+                    {{/if}}
+                </div>
             </div>
 
             {{{region name="cart_below_totals"}}}
 
-            {{#if cart.show_primary_checkout_button}}
-                <div class="cart-actions cart-content-padding-right">
-                    <a class="button button--primary" href="{{urls.checkout.single_address}}" title="{{lang 'cart.checkout.title'}}">{{lang 'cart.checkout.button'}}</a>
-                    {{#if cart.show_multiple_address_shipping}}
-                        <a class="checkoutMultiple" href="{{urls.checkout.multiple_address}}">
-                            {{lang 'cart.preview.checkout_multiple'}}
-                        </a>
-                    {{/if}}
-                </div>
-            {{else}}
-                <div class="cart-actions cart-content-padding-right">
-                    <a class="button" href="{{urls.home}}" title="{{lang 'cart.continue_shopping'}}">{{lang 'cart.continue_shopping'}}</a>
-                </div>
-            {{/if}}
+            
 
             {{#if cart.additional_checkout_buttons}}
                 <div class="cart-additionalCheckoutButtons cart-content-padding-right">

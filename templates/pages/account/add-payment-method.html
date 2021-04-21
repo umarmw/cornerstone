@@ -1,5 +1,5 @@
 {{#partial "page"}}
-
+<div class="container" >
     {{inject 'creditCardNumber' (lang 'forms.validate.payment_method.credit_card_number')}}
     {{inject 'expiration' (lang 'forms.validate.payment_method.expiration')}}
     {{inject 'nameOnCard' (lang 'forms.validate.payment_method.name_on_card')}}
@@ -107,6 +107,6 @@
             </div>
         </form>
     </div>
-
+</div>
 {{/partial}}
 {{> layout/base}}

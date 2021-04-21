@@ -7,8 +7,8 @@ const weakMap = new WeakMap(); // eslint-disable-line no-unused-vars
 const Swal = sweetAlert.mixin({
     buttonsStyling: false,
     customClass: {
-        confirmButton: 'button',
-        cancelButton: 'button',
+        confirmButton: 'button button--primary',
+        cancelButton: 'button button--primary-outline',
     },
 });
 

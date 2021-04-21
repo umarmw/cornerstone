@@ -1,5 +1,5 @@
 {{#partial "page"}}
-
+<div class="container" >
     {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
 
     {{#if forms.address.address_id}}
@@ -31,7 +31,7 @@
                 </fieldset>
                 <div class="form-actions">
                     <input type="submit" class="button button--primary" value="{{lang 'forms.address.submit_value'}}">
-                    <a href="{{urls.account.addresses}}" class="button">{{lang 'common.cancel'}}</a>
+                    <a href="{{urls.account.addresses}}" class="button button--primary-outline">{{lang 'common.cancel'}}</a>
                     {{inject 'required' (lang 'common.required')}}
                     {{inject 'state_error' (lang 'errors.state_error')}}
                 </div>
@@ -39,6 +39,6 @@
 
         </div>
     </div>
-
+</div>
 {{/partial}}
 {{> layout/base}}
