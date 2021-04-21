@@ -19,6 +19,7 @@
 
 .form-inlineMessage {
     display: block;
+    font-size: 12px;
 }
 
 
@@ -32,6 +33,7 @@
     }
 
     .form-inlineMessage {
+        color: stencilColor("input-form--error");
 
         // scss-lint:disable NestingDepth
         &:before {
@@ -46,6 +48,14 @@
             top: $form-error-icon-top;
             width: $form-error-icon-width;
         }
+    }
+
+    .form-input, 
+    .form-select, 
+    .form-checkbox + .form-label::before, 
+    .form-radio + .form-label::before, 
+    .form-prefixPostfix-label {
+      border-color: stencilColor("input-form--error");
     }
 }
 

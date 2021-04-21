@@ -1,0 +1,45 @@
+
+//cart page
+.cart-content-container {
+    display: block;
+    @media (min-width: 961px) {
+      display: flex;
+    }
+  }
+  
+.cart-content-container__content {
+  width:100%;
+  padding: 15px;
+  @media (min-width: 961px) {
+    width: 65%;
+    margin-right: 30px;
+  }
+}
+
+.cart-content-container__totals {
+  max-width: 380px;
+  box-shadow: 0 5px 20px 0 stencilColor("color-greyLighter");
+  background-color: stencilColor("color-white");
+  padding: 15px;
+  margin: 40px auto;
+  @media (min-width: 961px) {
+    width: 35%;
+  }
+}
+
+.cart-actions .button{
+  display: block;
+  float: unset;
+}
+
+.cart-totals__container {
+  width: 100%;
+  padding:15px;
+  @media (min-width: 961px) {
+    width: 100%;
+  }
+}
+
+.shipping-quotes {
+  text-align: center;
+}

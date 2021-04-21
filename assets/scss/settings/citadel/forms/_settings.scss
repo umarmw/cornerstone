@@ -203,8 +203,8 @@ $form-actions-padding:                      null;
 // $form-inputIndicator-size:                  22px;
 // $form-inputIndicator-top:                   remCalc(10px);
 
-$form-inlineMessage-fontWeight:             null;
-$form-inlineMessage-margin:                 spacing("quarter") 0 (-(spacing("third")));
+$form-inlineMessage-fontWeight:             300; //previously null
+$form-inlineMessage-margin:                 0; //previously spacing("quarter") 0 (-(spacing("third")));
 
 
 // Stencil Variables
