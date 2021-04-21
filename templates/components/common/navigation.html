@@ -1,3 +1,6 @@
+
+
+
 <nav class="navUser">
     {{> components/common/currency-selector}}
 
@@ -19,7 +22,7 @@
                 </div>
             </li>
         {{/if}}
-        <li class="navUser-item">
+        <!-- <li class="navUser-item">
             <a class="navUser-action navUser-item--compare"
                href="{{urls.compare}}"
                data-compare-nav
@@ -33,8 +36,8 @@
                 {{> components/common/social-links}}
             </li>
             <li class="navUser-item navUser-item--divider">|</li>
-        {{/if}}
-        <li class="navUser-item">
+        {{/if}} -->
+        <!-- <li class="navUser-item">
             <button class="navUser-action navUser-action--quickSearch"
                type="button"
                id="quick-search-expand"
@@ -44,8 +47,8 @@
             >
                 {{lang 'common.search'}}
             </button>
-        </li>
-        {{#if settings.gift_certificates_enabled}}
+        </li> -->
+        <!-- {{#if settings.gift_certificates_enabled}}
             <li class="navUser-item">
                 <a class="navUser-action"
                    href="{{urls.gift_certificate.purchase}}"
@@ -54,7 +57,7 @@
                     {{lang 'common.gift_cert'}}
                 </a>
             </li>
-        {{/if}}
+        {{/if}} -->
         <li class="navUser-item navUser-item--account">
             {{#if customer}}
                 <a class="navUser-action"
@@ -76,7 +79,7 @@
                 >
                     {{lang 'common.login'}}
                 </a>
-                {{#if settings.account_creation_enabled}}
+                <!-- {{#if settings.account_creation_enabled}}
                     <span class="navUser-or">{{lang 'common.or'}}</span>
                     <a class="navUser-action"
                        href="{{urls.auth.create_account}}"
@@ -84,7 +87,7 @@
                     >
                         {{lang 'common.sign_up'}}
                     </a>
-                {{/if}}
+                {{/if}} -->
             {{/if}}
         </li>
         <li class="navUser-item navUser-item--cart">

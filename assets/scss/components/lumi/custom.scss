@@ -119,3 +119,36 @@ input, button, select, textarea, details, [href] {
     outline: none !important;
   }
 }
+
+.form-actions .button, .form-actions input, .form-actions a {
+  vertical-align: initial;
+}
+
+
+//header
+.header { 
+  flex-direction: row !important;
+}
+.header-logo {
+  margin: 10px auto 0px !important;
+  margin-left: 2.85714rem;
+}
+
+.header-logo-image {
+  max-width: initial;
+}
+
+.navUser {
+  width: 30%;
+}
+
+.header-logo-image-container {
+  min-height: initial !important;
+}
+
+.fixed-header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%; 
+}
