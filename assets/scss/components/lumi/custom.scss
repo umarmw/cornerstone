@@ -7,13 +7,14 @@
 }
 
 .button--primary {
-  background-color: stencilColor("button--primary-color");
-  border-color: stencilColor("button--primary-color");
-  color: stencilColor("color-white");
+  background-color: stencilColor("button--primary-color") !important;
+  border-color: stencilColor("button--primary-color") !important;
+  color: stencilColor("color-white") !important;
+  border: 2px solid;
   &:hover, &:focus, &:active {
-    background-color: stencilColor("button--primary-colorHover");
-    border-color: stencilColor("button--primary-colorHover");
-    color: stencilColor("color-white");
+    background-color: stencilColor("button--primary-colorHover") !important;
+    border-color: stencilColor("button--primary-colorHover") !important;
+    color: stencilColor("color-white") !important;
   }
 }
 
@@ -21,6 +22,7 @@
   color: stencilColor("color-white");
   background-color:stencilColor("button--secondary-color");
   border-color:stencilColor("button--secondary-color");
+  border: 2px solid;
   &:hover, &:focus, &:active {
     background-color: stencilColor("button--secondary-colorHover");
     border-color: stencilColor("button--secondary-colorHover");
@@ -35,6 +37,7 @@
   font-size: 14px;
   font-weight: 300;
   letter-spacing: 0;
+  border: 2px solid;
   &:hover, &:focus, &:active {
     background-color: stencilColor("button--tertiary-colorHover");
     border-color: stencilColor("button--tertiary-borderColor");
@@ -43,13 +46,13 @@
 }
 
 .button--primary-outline {
-  color: stencilColor("color-textBase");
-  background-color: stencilColor("color-white");
-  border: 2px solid stencilColor("button--primary-color");
+  color: stencilColor("color-textBase") !important;
+  background-color: stencilColor("color-white") !important;
+  border: 2px solid stencilColor("button--primary-color") !important;
   &:hover, &:focus, &:active {
-    background-color: stencilColor("color-white");
-    border: 2px solid stencilColor("button--primary-color");
-    color: stencilColor("color-greyDarkest");
+    background-color: stencilColor("color-white") !important;
+    border: 2px solid stencilColor("button--primary-color") !important;
+    color: stencilColor("color-greyDarkest") !important;
   }
 }
 
@@ -82,6 +85,10 @@
   }
 }
 
+.button--small {
+  font-size: 14px;
+}
+
 .form-input, .form-select {
   border: 2px solid stencilColor("color-primary");
   padding: 10px;
@@ -111,7 +118,7 @@
 
 .form-actions a {
   vertical-align: unset;
-  margin-top: 10px !important;
+  //margin-top: 10px !important;
 }
 
 input, button, select, textarea, details, [href] {
@@ -151,4 +158,49 @@ input, button, select, textarea, details, [href] {
   top: 0;
   left: 0;
   width: 100%; 
+}
+
+//cart page
+.cart-content-container {
+  display: block;
+  @media (min-width: 961px) {
+    display: flex;
+  }
+}
+
+.cart-content-container__content {
+  width:100%;
+  padding: 15px;
+  @media (min-width: 961px) {
+    width: 65%;
+    margin-right: 30px;
+  }
+}
+
+.cart-content-container__totals {
+  max-width: 380px;
+  box-shadow: 0 5px 20px 0 stencilColor("color-greyLighter");
+  background-color: stencilColor("color-white");
+  padding: 15px;
+  margin: 40px auto;
+  @media (min-width: 961px) {
+    width: 35%;
+  }
+}
+
+.cart-actions .button{
+  display: block;
+  float: unset;
+}
+
+.cart-totals__container {
+  width: 100%;
+  padding:15px;
+  @media (min-width: 961px) {
+    width: 100%;
+  }
+}
+
+.shipping-quotes {
+  text-align: center;
 }
