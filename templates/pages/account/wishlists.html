@@ -1,11 +1,13 @@
 {{#partial "page"}}
-{{#if settings.show_wishlist}}
-    <div class="account account--fixedLarge">
-        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
-        <h2 class="page-heading">{{lang 'account.wishlists.heading' }}</h2>
-        {{> components/account/navigation account_page='wishlists'}}
-        {{> components/account/wishlist-list}}
-    </div>
-{{/if}}
+<div class="container" >
+    {{#if settings.show_wishlist}}
+        <div class="account account--fixedLarge">
+            {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+            <h2 class="page-heading">{{lang 'account.wishlists.heading' }}</h2>
+            {{> components/account/navigation account_page='wishlists'}}
+            {{> components/account/wishlist-list}}
+        </div>
+    {{/if}}
+</div>
 {{/partial}}
 {{> layout/base}}
