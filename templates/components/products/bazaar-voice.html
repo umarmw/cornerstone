@@ -10,7 +10,7 @@
                     </div>
                 </div>
                 <p class="bv-reviews__user-count js-bv-reviews__user-count">From <span></span> users</p>
-                <a href="{{product.url}}{{#if is_ajax}}#write_bv_review{{/if}}" class="btn btn-secondary js-bv-reviews__write-review" {{#unless is_ajax}}data-reveal-id="modal-bv-review-form"{{/unless}}
+                <a href="{{product.url}}{{#if is_ajax}}#write_bv_review{{/if}}" class="button button--primary js-bv-reviews__write-review" {{#unless is_ajax}}data-reveal-id="modal-bv-review-form"{{/unless}}
                 role="button">{{lang 'products.reviews.new'}}</a>
                 {{> components/products/modals/writeBVReview}}
                 <div class="bv-reviews__meta-select js-bv-reviews__sort-review">
@@ -42,7 +42,7 @@
             <div class="bv-reviews__right">
                 <div class="bv-reviews__list" id="js-bv-reviews-list">
                 </div>
-                <a class="btn btn-primary js-bv-view-more" data-current="0">See more reviews</a>
+                <a class="bv-reviews__see-more js-bv-view-more" data-current="0">See more reviews</a>
             </div>            
         </div>
     </div>

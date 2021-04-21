@@ -40,7 +40,7 @@ export default class BazaarVoice{
                                 <span style="display: none;">                                   
                                 </span>
                                 </div>
-                                <p class="btn btn-tertiary review__text__more">Read more</p>
+                                <a class="bv-reviews__read-more review__text__more">Read more</a>
                             </div>
                         </div>
                     </div>
