@@ -12,7 +12,7 @@
     display: flex;
     flex-flow: row wrap;
     margin-bottom: 24px;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         margin-bottom: 0;
     }
 }
@@ -23,7 +23,7 @@
     width: 100%;
     text-align: center;
     margin: 0;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         flex: 0 0 auto;
         width: 33%;
         background-color: transparent;
@@ -36,7 +36,7 @@
     position: relative;
     width: 100%;
     margin: 0;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         flex: 0 0 auto;
         width: 67%;
     }
@@ -49,7 +49,7 @@
 .bv-reviews__content {
     padding: 16px 16px 0;
     border-bottom: 1px solid #ccc;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         padding: 40px 0px 32px;
     }
 }
@@ -58,7 +58,7 @@
     display: flex;
     flex-flow: row wrap;
     margin-bottom: 24px;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         margin-bottom: 0;
     }
 }
@@ -67,7 +67,7 @@
     flex-direction: row;
     display: block;
     align-items: left;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         justify-content: flex-start;
         margin: 0 0 20px;
         max-width: 352px;
@@ -80,7 +80,7 @@
 
 .rating__container {
     margin-right: 8px;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         margin-bottom: 0;
     }
 }
@@ -88,7 +88,7 @@
 .rating__image {
     margin-right: 4px;
     width: 24px;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         width: 20px;
     }
 }
@@ -100,7 +100,7 @@
     font-weight: 300;
     line-height: 24px;
     word-break: break-word;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
        margin: 0;
     }
 }
@@ -119,7 +119,7 @@
     font-size: 14px;
     line-height: 24px;
     word-break: break-word;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         max-width: 527px;
     }
 }
@@ -131,7 +131,7 @@
 
 .bv-reviews__content-left {
     width: 100%;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         flex: 0 0 auto;
         width: 30%;
         margin-left: 0;
@@ -143,7 +143,7 @@
 .bv-reviews__content-right {
     width: 100%;
     margin-bottom: 16px;
-    @include screen($desktop) {
+    @include breakpoint(medium) {
         flex: 0 0 auto;
         width: 60%;
         margin-left: 0;
@@ -172,7 +172,7 @@
 .bv-reviews__meta {
   display:none;
   margin-top: 40px;
-  @include screen($desktop) {
+  @include breakpoint(medium) {
     display: block;
   }
 }
@@ -198,4 +198,10 @@
 .bv-reviews__final-rating {
     font-size: 40px;
     font-weight: 300;
+}
+
+.dropdown-select {
+    @include breakpoint(medium) {
+        display: none;
+    }
 }

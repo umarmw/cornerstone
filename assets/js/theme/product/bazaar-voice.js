@@ -1,5 +1,3 @@
-import { data } from "jquery";
-
 const Handlebars = require("handlebars");
 
 
