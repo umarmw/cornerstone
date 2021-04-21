@@ -1,33 +1,49 @@
 <div class="bv-reviews">
-
-    <div class="bv-reviews__summary">
-        <h3 class="js-bv-reviews__summary-rating">00</h3>
-        <div class="js-bv-reviews__summary-stars">[stars]</div>
-        <div class="js-bv-reviews__summary-count">From <span>00</span> reviews</div>
-
-        <a href="{{product.url}}{{#if is_ajax}}#write_bv_review{{/if}}"
-            class="js-bv-reviews__write-review button button--primary"
-            {{#unless is_ajax}}data-reveal-id="modal-bv-review-form"{{/unless}}
-            role="button"
-        >
-            {{lang 'products.reviews.new'}}
-        </a>
-        {{> components/products/modals/writeBVReview}}
-
-        <div>Sort by
-            <select class="select select-wide js-bv-reviews__sort-review">
-                <option value="Rating:desc">Highest to lowest rating</option>
-                <option value="Rating:asc">Lowest to highest rating</option>
-                <option value="Recent">Most recent</option>
-            </select>
+    <div class="bv-reviews__container">
+        <div class="bv-reviews__grid">
+            <div class="bv-reviews__left">
+                <h1 class="bv-reviews__final-rating js-bv-reviews__final-rating"></h1>
+                <div class="bv-reviews__rating-star">
+                    <div class="rating">
+                        <div class="rating__container" id="js-rating-review-overall">
+                        </div>
+                    </div>
+                </div>
+                <p class="bv-reviews__user-count js-bv-reviews__user-count">From <span></span> users</p>
+                <a href="{{product.url}}{{#if is_ajax}}#write_bv_review{{/if}}" class="btn btn-secondary js-bv-reviews__write-review" {{#unless is_ajax}}data-reveal-id="modal-bv-review-form"{{/unless}}
+                role="button">{{lang 'products.reviews.new'}}</a>
+                {{> components/products/modals/writeBVReview}}
+                <div class="bv-reviews__meta-select js-bv-reviews__sort-review">
+                    <select class="dropdown-select" name="sort-by">
+                        <option value="">Sort by</option>
+                        <option value="Rating:desc">Highest to lowest rating</option>
+                        <option value="Rating:asc">Lowest to highest rating</option>
+                        <option value="Recent">Most recent</option>
+                    </select>
+                </div>
+                <div class="bv-reviews__meta js-bv-reviews__sort-review">
+                    <div class="bv-reviews__sort">
+                        Sort by
+                    </div>
+                    <div class="radio">
+                        <input id="radio-1" class="radio-btn" name="radio" type="radio" checked>
+                        <label for="radio-1" class="radio-label">Highest to lowest rating</label>
+                    </div>
+                    <div class="radio">
+                        <input id="radio-2" class="radio-btn" name="radio" type="radio">
+                        <label for="radio-2" class="radio-label">Lowest to highest rating</label>
+                    </div>
+                    <div class="radio">
+                        <input id="radio-3" class="radio-btn" name="radio" type="radio">
+                        <label for="radio-3" class="radio-label">Most recent</label>
+                    </div>
+                </div>
+            </div>
+            <div class="bv-reviews__right">
+                <div class="bv-reviews__list" id="js-bv-reviews-list">
+                </div>
+                <a class="btn btn-primary js-bv-view-more" data-current="0">See more reviews</a>
+            </div>            
         </div>
     </div>
-
-    <div class="bv-reviews__list">
-
-        <div id="bv-reviews__list"></div>
-
-        <a href="#" class="js-bv-view-more" data-current="0">See more reviews</a>
-    </div>
-
 </div>
